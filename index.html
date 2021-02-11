@@ -6,7 +6,7 @@
     <meta name="author" content="htxz6a6">
     <title>2048</title>
 
-    <link rel="shortcut icon" href="">
+    <link rel="shortcut icon" href="images/logo.png">
     <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.font.im/css?family=Itim" rel="stylesheet">
 </head>
@@ -38,11 +38,19 @@
     </div>
 </div>
 <footer>
-    <div class="levelChange">想回看你之前游玩的过程吗？点击
+    <div class="levelChange">
+        <span>
+            想回看你之前游玩的过程吗？点击
         <button type="button" id="review">这里</button>
-        回看上一局 <span id="prompt" style="display: none;">按任意键继续</span>
+        回看上一局
+        </span>
+        <span id="prompt" style="display: none;">按任意键继续</span>
+        <button type="button" id="delete">单击删除历史记录</button>
     </div>
-    <div id="author">by 6a6</div>
+    <div id="author">
+        <span>单击重启以结束游戏</span>
+        <span>by 6a6</span>
+    </div>
 </footer>
 <script src="scripts/script.js"></script>
 </body>
