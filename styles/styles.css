@@ -92,7 +92,7 @@ body {
     text-align: center;
     line-height: 6.5rem;
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 3rem;
     color: antiquewhite;
 }
 footer {
@@ -109,9 +109,13 @@ footer {
     color: #FF7635;
     /*text-align: right;*/
 }
-footer div {
-    display: inline-block;
+footer .levelChange {
+    display: flex;
+    justify-content: space-between;
 }
+/*footer div {*/
+/*    display: inline-block;*/
+/*}*/
 footer button {
     border: 0;
     font-size: 1.5rem;
@@ -122,13 +126,9 @@ footer button {
     color: rgb(52, 20, 215);
 }
 footer #prompt {
-    position: absolute;
-    right: 2rem;
-    float: right;
-
     color: crimson;
 }
 footer #author {
-    display: block;
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
 }
