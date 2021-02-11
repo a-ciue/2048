@@ -132,6 +132,8 @@ Container.prototype.contentChange = function (blocksContent) {
         for (let i=0; i<16; i++){
             this.blocks[i].innerHTML = contentArray[i];
         }
+    } else {
+        alert('已到达本局游戏最后一步');
     }
 }
 
@@ -139,7 +141,7 @@ Container.prototype.contentChange = function (blocksContent) {
 let container = new Container();
 container.highestPad.innerHTML = 'highest score: ' + container.highest.toString();
 //如果按下游戏开始/重置
-document.querySelector('.panel button').onclick = function () {
+function gameStart() {
     window.onkeydown = function keyDown(event) {
         container.fall(event.key);
         window.onkeydown = function () {}
@@ -172,18 +174,30 @@ document.querySelector('.panel button').onclick = function () {
     container.empty();
     container.ranNumber();
     container.contentString = container.contentRecording();
-};
+}
+document.querySelector('.panel button').onclick = gameStart;
 //按下历史记录回放
 document.querySelector('footer #review').onclick = function () {
     let i=0;
-    let prompt = document.querySelector('footer #prompt');
-    prompt.style.display = 'inline'; //按钮显示
     container.contentString = 0;
     container.storageString = localStorage.getItem((--container.times).toString());
-    let contentArray = container.storageString.split('.');
-    container.storageString = 0;
-    container.contentChange(contentArray[0]);
-    window.onkeydown = function switchBlocks() {
-        container.contentChange(contentArray[i++]);
+    if(container.storageString){
+        let prompt = document.querySelector('footer #prompt');
+        prompt.style.display = 'inline'; //按钮显示
+        let contentArray = container.storageString.split('.');
+        container.storageString = 0;
+        container.contentChange(contentArray[0]);
+        window.onkeydown = function switchBlocks() {
+            container.contentChange(contentArray[i++]);
+        }
+    } else {
+        alert('本地无游玩记录！');
     }
+}
+//清除历史记录
+document.querySelector('footer #delete').onclick = function () {
+    localStorage.clear();
+    container.highestPad.innerHTML = 'highest score: 0';
+    gameStart();
+    alert('历史记录清除完毕，将自动开始游戏');
 }
