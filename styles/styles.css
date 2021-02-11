@@ -39,7 +39,7 @@ body {
     background-color: rgba(3,133,209,0.61);
     color: rgb(52, 20, 215);
 }
-.panel button:hover {
+button:hover {
     background-color: rgb(96, 205, 241);
     color: beige;
     box-shadow: 0 0 2rem darkblue;
