@@ -1,0 +1,134 @@
+html {
+    font-size: 10px;
+    font-family: "Comic Sans MS", cursive;
+    background-image: url("../images/background.gif");
+}
+body {
+    margin: 0;
+}
+.wrapper {
+    width: 35rem;
+    min-height: 100vh;
+    margin: 0 auto;
+    background-color: rgba(0,206,209,0.61);
+    box-shadow: 0 0 0.5rem darkblue;
+}
+.panel {
+    height: 15rem ;
+}
+.panel img {
+    height: 10rem;
+    float: left;
+    display: inline-block;
+
+}
+.panel button {
+    position: relative;
+    left: 3rem;
+    margin: 1.5rem auto;
+    border: 0;
+    height: 3rem;
+    width: 16rem;
+    /*display: block;*/
+
+    font-family: "Comic Sans MS", cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 0 0.7rem darkblue;
+    border-radius: 0.8rem;
+    background-color: rgba(3,133,209,0.61);
+    color: rgb(52, 20, 215);
+}
+.panel button:hover {
+    background-color: rgb(96, 205, 241);
+    color: beige;
+    box-shadow: 0 0 2rem darkblue;
+}
+.panel button:focus {
+    border: 0;
+}
+.panel #highest {
+    margin: 0 auto;
+    display: inline-block;
+    position: relative;
+    left: 5rem;
+
+    color: rgb(46, 132, 225);
+    font-size: 1.5rem;
+    /*text-shadow: 0 0 1rem ;*/
+}
+.panel #score {
+    margin: 3rem;
+
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(221, 45, 170);
+    /*text-shadow: 0 0 1rem darkblue;*/
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    padding: 1rem;
+    width: 35rem;
+    /*max-width: 100vw;*/
+    height: 35rem;
+    /*max-height: 100vh 100vw;*/
+    margin: 0 auto;
+    border-radius: 1rem;
+    background-color: rgb(255, 193, 117);
+}
+.blocks {
+    width: 20%;
+    height: 20%;
+    margin: 0.1rem;
+    box-sizing: border-box;
+    background-color: rgb(248, 114, 125);
+    box-shadow: 0 0 0.4rem rgb(120, 14, 207);
+    border-radius: 1rem;
+    text-align: center;
+    line-height: 6.5rem;
+    font-weight: bold;
+    font-size: 4rem;
+    color: antiquewhite;
+}
+footer {
+    box-sizing: border-box;
+    height: 5rem;
+    margin: 0 0.5rem 0.5rem 0;
+    padding: 1rem;
+    background-color: rgba(0, 206, 209, 0.6);
+    box-shadow: 1rem 1rem 2rem  darkslateblue;
+
+    font-weight: bolder;
+    font-size: 1.5rem;
+    font-family: '幼圆', cursive;
+    color: #FF7635;
+    /*text-align: right;*/
+}
+footer div {
+    display: inline-block;
+}
+footer button {
+    border: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    box-shadow: 0 0 0.7rem darkblue;
+    border-radius: 0.8rem;
+    background-color: rgba(3,133,209,0.61);
+    color: rgb(52, 20, 215);
+}
+footer #prompt {
+    position: absolute;
+    right: 2rem;
+    float: right;
+
+    color: crimson;
+}
+footer #author {
+    display: block;
+    text-align: right;
+}
