@@ -144,15 +144,15 @@ container.highestPad.innerHTML = 'highest score: ' + container.highest.toString(
 function gameStart() {
     window.onkeydown = function keyDown(event) {
         container.fall(event.key);
-        window.onkeydown = function () {}
-        setTimeout(function () {
-            if(container.counter){
+        if(container.counter){
+            window.onkeydown = function () {}
+            setTimeout(function () {
                 container.counter=0;
                 container.ranNumber();
                 container.contentString += '.'+container.contentRecording();
-            }
             window.onkeydown = keyDown;
-        }, 300);            //太快了会bug
+            }, 300);
+        }
     }
     //对记录的存储
     container.times = Number(localStorage.getItem('times')) + 1;
